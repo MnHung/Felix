@@ -13,7 +13,7 @@ namespace Felix.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return sView();
         }
 
         //
