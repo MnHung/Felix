@@ -15,6 +15,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
+    <JSLintSkip>\Scripts\MicrosoftMvcValidation.debug.js|\Scripts\MicrosoftMvcAjax.js|\Scripts\MicrosoftMvcAjax.debug.js|\Scripts\MicrosoftAjax.js|\Scripts\MicrosoftAjax.debug.js|\Scripts\jquery.validate.unobtrusive.min.js|\Scripts\jquery.validate.unobtrusive.js|\Scripts\jquery.validate.min.js|\Scripts\jquery.validate.js|\Scripts\jquery.validate-vsdoc.js|\Scripts\jquery.unobtrusive-ajax.min.js|\Scripts\jquery.unobtrusive-ajax.js|\Scripts\jquery-ui.min.js|\Scripts\jquery-ui.js|\Scripts\jquery-1.4.4.min.js|\Scripts\jquery-1.4.4.js|\Scripts\MicrosoftMvcValidation.js|\Scripts\jquery-1.4.4-vsdoc.js</JSLintSkip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MongoDB.Bson, Version=1.7.0.4714, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <HintPath>..\packages\mongocsharpdriver.1.7\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=1.7.0.4714, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <HintPath>..\packages\mongocsharpdriver.1.7\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages" />
     <Reference Include="System.Web.Helpers" />
@@ -116,6 +123,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Felix\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
