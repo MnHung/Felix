@@ -24,7 +24,7 @@ namespace Felix
 			routes.MapRoute(
 				"Default", // 路由名稱
 				"{controller}/{action}/{id}", // URL 及參數
-				new { controller = "Home", action = "Index", id = UrlParameter.Optional } // 參數預設值
+				new { controller = "Felix", action = "Index", id = UrlParameter.Optional } // 參數預設值
 			);
 
 		}
