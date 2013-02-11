@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Felix.Models;
 
 namespace Felix.Controllers
 {
@@ -13,13 +14,23 @@ namespace Felix.Controllers
 
         public ActionResult Index()
         {
-			var mongoServerSettings = new MongoDB.Driver.MongoServerSettings();
-			mongoServerSettings.Server = new MongoDB.Driver.MongoServerAddress("mongodb://appharbor:f588ecfeb40e49682055a3a75b002e9b@linus.mongohq.com:10061/238c698d_a07f_425c_a07d_155064079ba8");
-
-			var mongoServer = new MongoDB.Driver.MongoServer(mongoServerSettings);
-			mongoServer.Connect();
             return View();
         }
+
+		public ActionResult test()
+		{
+			var felixRep = new FelixRepository();
+			string result;
+			try
+			{
+				result = felixRep.GetAll();
+			}
+			catch (Exception ex)
+			{
+				result = ex.ToString();
+			}
+			return Json(result, JsonRequestBehavior.AllowGet);
+		}
 
         //
         // GET: /Felix/Details/5
