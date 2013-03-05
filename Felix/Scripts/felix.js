@@ -15,29 +15,34 @@ Felix.View.List = (function () {
 	var initial = function () {
 		$("#felix-list").jqGrid({
 			url: 'test',
-			datatype: "json",
-			colNames: ['Id', 'Name', 'CreateTime', 'Amount', 'Tax', 'Total', 'Notes'],
+			datatype: "local",
+			colNames: ['Name', 'Number'],
 			colModel: [
-				{ name: '_id', index: '_id', width: 55 },
-				{ name: 'Name', index: 'name', width: 90 },
-				{ name: 'CreateTime', index: 'name asc, invdate', width: 100 },
-				{ name: 'amount', index: 'amount', width: 80, align: "right" },
-				{ name: 'tax', index: 'tax', width: 80, align: "right" },
-				{ name: 'total', index: 'total', width: 80, align: "right" },
-				{ name: 'note', index: 'note', width: 150, sortable: false }
+				{ name: 'Name', index: 'Name', width: 90 },
+				{ name: 'Number', index: 'Number', width: 100 }
 			],
 			rowNum: 10,
 			rowList: [10, 20, 30],
-			pager: '#pager2',
 			sortname: 'id',
 			viewrecords: true,
 			sortorder: "desc",
 			caption: "JSON Example"
 		});
 
+		// get felix data list to show.
+		$.getJSON("test", function (felixList) {
+			if ($.isArray(felixList)) {
+				var $grid = $("#felix-list");
+				for (var i = 0; i < felixList.length; ++i) {
+					$grid.jqGrid('addRowData', i + 1, felixList[i]);
+				}
+			}
+		});
 	};
 
-	return { initial: initial };
+	return {
+		initial: initial
+	};
 } ());
 
 Felix.start = function () {
