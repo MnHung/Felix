@@ -16,20 +16,25 @@ namespace Felix.Controllers
         {
             return View();
         }
+		
+		public ActionResult List()
+		{
+			return View();
+		}
 
 		public ActionResult test()
 		{
 			var felixRep = new FelixRepository();
-			string result;
 			try
 			{
-				result = felixRep.GetAll();
+				var allFixOrders = felixRep.GetAll();
+				return Json(allFixOrders.ToArray(), JsonRequestBehavior.AllowGet);
 			}
 			catch (Exception ex)
 			{
-				result = ex.ToString();
+				string result = ex.ToString();
+				return Json(result, JsonRequestBehavior.AllowGet);
 			}
-			return Json(result, JsonRequestBehavior.AllowGet);
 		}
 
         //

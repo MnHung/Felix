@@ -27,11 +27,32 @@ namespace Felix.Models
 			db = server.GetDatabase("238c698d_a07f_425c_a07d_155064079ba8");
 		}
 
-		public string GetAll()
+		//public string GetAll()
+		//{
+		//    var collection = db.GetCollection("felix");
+		//    var all = collection.FindAll();
+		//    return all.ToJson();
+		//}
+		
+		//public MongoCursor<BsonDocument> GetAll()
+		public List<FixOrder> GetAll()
 		{
 			var collection = db.GetCollection("felix");
-			var all = collection.FindAll();
-			return all.ToJson();
+			MongoCursor<BsonDocument> all = collection.FindAll();
+
+			List<FixOrder> allFixOrders = new List<FixOrder>();
+			//string ya = all.ToJson();
+			//var qq = all.ToList();
+			foreach(var document in all)
+			{
+				allFixOrders.Add(new FixOrder(document));
+			}
+			return allFixOrders;
+
+			//MongoCursor<BsonDocument> all = collection.FindAll();
+
+			//var allFixOrders = from f in collection.AsQueryable<FixOrder>()
+			//                   select f;
 		}
 
 		//TODO: add, delete, edit. (and save?)

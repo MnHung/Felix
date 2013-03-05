@@ -69,10 +69,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\FelixModels.cs" />
     <Compile Include="Models\FelixRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\ui.jqgrid.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\jquery-ui.css" />
@@ -89,6 +91,29 @@
     <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\felix-list.js" />
+    <Content Include="Scripts\felix.js" />
+    <Content Include="Scripts\plugins\grid.locale-tw.js" />
+    <Content Include="Scripts\plugins\jquery-1.9.1.js" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\images\animated-overlay.gif" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\images\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\images\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\images\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\images\ui-icons_666666_256x240.png" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\jquery-ui-1.10.1.custom.css" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\css\flick\jquery-ui-1.10.1.custom.min.css" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\js\jquery-ui-1.10.1.custom.js" />
+    <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\js\jquery-ui-1.10.1.custom.min.js" />
+    <Content Include="Scripts\plugins\jquery.jqGrid.src.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -120,6 +145,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Views\Felix\List.cshtml" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Felix\Index.cshtml" />
   </ItemGroup>
