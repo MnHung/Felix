@@ -22,6 +22,11 @@ namespace Felix.Controllers
 			return View();
 		}
 
+		public ActionResult Operation()
+		{
+			return View();
+		}
+
 		public ActionResult test()
 		{
 			var felixRep = new FelixRepository();
