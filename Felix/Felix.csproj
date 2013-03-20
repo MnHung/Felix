@@ -74,6 +74,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\felix.css" />
+    <Content Include="Content\reset.css" />
     <Content Include="Content\ui.jqgrid.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -114,6 +116,7 @@
     <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\js\jquery-ui-1.10.1.custom.js" />
     <Content Include="Scripts\plugins\jquery-ui-1.10.1.custom\js\jquery-ui-1.10.1.custom.min.js" />
     <Content Include="Scripts\plugins\jquery.jqGrid.src.js" />
+    <Content Include="Scripts\plugins\jquery.tmpl.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -144,7 +147,9 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Views\Felix\Operation.cshtml" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Felix\List.cshtml" />
   </ItemGroup>

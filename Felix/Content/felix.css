@@ -1,0 +1,66 @@
+﻿.none {
+	/*display: none;*/
+	visibility: hidden;
+}
+
+.left
+{
+	float:left;	
+}
+
+.right
+{
+	float:right;
+}
+
+.editable .company-title {
+	text-align: center;
+	margin: 15px;
+}
+
+.editable .company-title span {
+	font-family: 標楷體;
+	font-size: 30px;
+	border-bottom: 2px solid
+}
+
+.secondary-title {
+	height: 30px;
+	width: 100%;
+}
+
+.secondary-title>div:first-child {
+	width: 66%;
+}
+
+.editable .insurance-company {
+	width: auto;
+}
+
+.editable .insurance-company span {
+	display: inline;	
+}
+
+.editable .company-info {
+	display: block;
+	width: 45%;
+	min-width: 400px;
+	margin-top: 3px;
+}
+
+.editable .company-info span{
+	display: inline;
+}
+
+.editable .form-number {
+	width: 33%;
+	text-align: right;
+}
+
+.editable .form-number span{
+	display: inline;
+}
+
+#felix-order-number{
+	width: 115px;
+}

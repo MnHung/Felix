@@ -1,0 +1,89 @@
+﻿@{
+    Layout = null;
+}
+
+<div id="felix-operations">
+  <ul>
+    <li><a href="#felix-edit">Edit</a></li>
+    <li><a href="#felix-create">Create</a></li>
+  </ul>
+  <div id="felix-edit">
+    <div>place a form</div>
+  </div>
+  <div id="felix-create">
+    place a empty form
+  </div>
+</div>
+
+<script type="text/x-jquery-tmpl" id="tmpl-felix-form">
+<div class="felix-form editable">
+    <form action="./">
+    <div class="head">
+        <div class="company-title">
+            <span>福&#12288;斯&#12288;企&#12288;業&#12288;行</span>
+        </div>
+        <div class="secondary-title">
+            <div class="left">
+                <div class="insurance-company left">
+                    <input name="insurance-company" type="checkbox" />
+                    <span>富邦</span>
+                    <input name="insurance-company" type="checkbox" />
+                    <span>華南</span>
+                    <input name="insurance-company" type="checkbox" />
+                    <span>友聯</span>
+                    <input name="insurance-company" type="checkbox" />
+                    <span>第一</span>
+                    <input name="insurance-company" type="checkbox" />
+                    <span>明台</span>
+                </div>
+                <div class="company-info right">
+                    <span>高雄市小港區平和路 213 號</span> <span>電話：(07)8122335~6</span>
+                </div>
+            </div>
+            <div class="form-number right">
+                <span>委修單編號：</span>
+                <input id="felix-order-number" type="text" value="${Number}" />
+            </div>
+        </div>
+    </div>
+    <div class="form-body">
+    </div>
+    </form>
+</div>
+</script>
+
+
+<div class="felix-form editable">
+    <form action="./">
+    <div class="head">
+        <div class="company-title">
+            <span>福&#12288;斯&#12288;企&#12288;業&#12288;行</span>
+        </div>
+        <div class="secondary-title">
+            <div class="left">
+                <div class="insurance-company left">
+                    <input name="insurance-company" type="checkbox" />
+                    <span>富邦</span>
+                    <input name="insurance-company" type="checkbox" />
+                    <span>華南</span>
+                    <input name="insurance-company" type="checkbox" />
+                    <span>友聯</span>
+                    <input name="insurance-company" type="checkbox" />
+                    <span>第一</span>
+                    <input name="insurance-company" type="checkbox" />
+                    <span>明台</span>
+                </div>
+                <div class="company-info right">
+                    <span>高雄市小港區平和路 213 號</span> <span>電話：(07)8122335~6</span>
+                </div>
+            </div>
+            <div class="form-number right">
+                <span>委修單編號：</span>
+                <input id="felix-order-number" type="text" value="${Number}" />
+            </div>
+        </div>
+    </div>
+    <div class="form-body">
+    </div>
+    </form>
+</div>

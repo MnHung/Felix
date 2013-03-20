@@ -2,15 +2,25 @@
     ViewBag.Title = "Index";
 }
 
-<link href="../../Content/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+@*<link href="../../Content/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />*@
+<link href="../../Scripts/plugins/jquery-ui-1.10.1.custom/css/flick/jquery-ui-1.10.1.custom.css"
+    rel="stylesheet" type="text/css" />
 <link href="../../Content/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+<link href="../../Content/reset.css" rel="stylesheet" type="text/css" />
+<link href="../../Content/felix.css" rel="stylesheet" type="text/css" />
 
 <h2>Felix Main</h2>
-<div id="main">
+<div id="felix-main">
+    <div class="list-panel"></div>
+    <div class="operation-panel"></div>
 </div>
 
-<script src="../../Scripts/jquery-1.4.4.js" type="text/javascript"></script>
-<script src="../../Scripts/jquery-ui.js" type="text/javascript"></script>
+<script src="../../Scripts/plugins/jquery-1.9.1.js" type="text/javascript"></script>
+@*<script src="../../Scripts/jquery-1.4.4.js" type="text/javascript"></script>*@
+<script src="../../Scripts/plugins/jquery-ui-1.10.1.custom/js/jquery-ui-1.10.1.custom.js" type="text/javascript"></script>
+<script src="../../Scripts/plugins/jquery.tmpl.js" type="text/javascript"></script>
+
+@*<script src="../../Scripts/jquery-ui.js" type="text/javascript"></script>*@
 
 <script src="../../Scripts/plugins/grid.locale-tw.js" type="text/javascript"></script>
 <script src="../../Scripts/plugins/jquery.jqGrid.src.js" type="text/javascript"></script>
